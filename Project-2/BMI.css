@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.Original-work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    gap: 25px;
+    box-sizing: border-box;
+    color: white;
+    background-color:rgb(72, 61, 53);
+}
+
+.Original-work  input {
+    height: 25px;
+    padding-left: 5px;
+    border-radius: 8px;
+}
+
+.Calculate-Button {
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.userHeight {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 6px;
+}
+.userWeight {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 18px;
+}
+.userResult {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 6px;
+}
+
+.BMI-Guide {
+    display: flex;
+    background-color: rgb(72, 61, 53);
+    min-height: 40vh;
+    flex-direction: column;
+    color: white;
+    padding-top: 10px;
+    box-sizing: border-box;
+    gap: 5px;
+    align-items: center;
+}
+
+.BMI-Guide :nth-child(1) {
+    padding-bottom: 10px; 
+}
+
