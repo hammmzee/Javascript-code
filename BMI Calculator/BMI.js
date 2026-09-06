@@ -7,12 +7,12 @@ button.addEventListener('click', () => {
     const result = document.querySelector('#result')
 
 
-    if(height === '' || height === isNaN(height) || height < 0) {
+    if(height === '' || isNaN(Number(height)) || height < 0) {
         result.value = "Invalid height"
-    } else if (weight  === '' || weight === isNaN(weight) || weight < 0){
+    } else if (weight  === '' || isNaN(Number(weight)) || weight < 0){
         result.value = "Invalid Weight"
     } else {
-        const BMI = (weight / (height * height)) * 10000
+        const BMI = (Number(weight) / (Number(height) * Number(height))) * 10000;
         result.value = BMI.toFixed(2)
     }
 });
