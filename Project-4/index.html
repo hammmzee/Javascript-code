@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <video autoplay muted loop playsinline id="bgc-video">
+            <source src="bg-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+        </video>
+        <div class="heading">
+            <h1>Guess the Number !</h1>
+        </div>
+        <div>
+            <form class="The-form" onsubmit="return false">
+                <input type="text" placeholder="write your guess!">
+            </form>
+        </div>
+        <div class=Submit-Button>
+            <button>Submit</button>
+        </div>
+        <div class="hint">
+            <h3></h3>
+        </div>
+        <div class="score">
+            <p id="Previous-guess">Previous guess : </p>
+            <p id="Remaining-guess">Remaining guess : </p>
+        </div>
+    </div>
+</body>
+<script src="game.js"></script>
+</html>
