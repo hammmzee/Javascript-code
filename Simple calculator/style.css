@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+} 
+
+.display {
+    min-height: 30vh;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    background-color: white;
+    border-radius: 15px;
+    height: 70px;
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+}
+
+button {
+    border: 2px solid gray;
+    border-radius: 25px;
+    background-color: #262525;
+    color: white;
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+    cursor: pointer;
+    margin: 2px;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.first-column {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    padding: 0 5px;
+    margin-right: -10px;
+}
+.second-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5px;
+    margin-right: -10px;
+}
+.third-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5px; 
+    margin-right: -10px;
+}
+.fourth-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5px; 
+}
+
+.fourth-column button {
+    background-color: #ec703a;
+}
+
+button:active {
+    background-color: #555;     
+    transform: scale(0.99);
+}
