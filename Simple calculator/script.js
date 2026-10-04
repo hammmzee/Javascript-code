@@ -1,38 +1,60 @@
-let display = document.querySelector('h2')
-let buttons = document.querySelectorAll('button')
+const display = document.querySelector('h2')
+const buttons = document.querySelectorAll('button')
 let string = '';
 
+function clickEvent() {
+    buttons.forEach((elements) => {
+        elements.addEventListener("click", (e) => {
+            keyHandlers(e.target.textContent) 
+        }) 
+    });
+}
 
-Array.from(buttons).forEach((elements) => {  
-    elements.addEventListener('click' , (e) => {
-    keyBoardKeyPress(e.target.textContent )
-    })
+document.addEventListener('keydown' , (e) => {
+        if(e.key === 'Backspace') {
+            keyHandlers('BACKSPACE')
+        } else if (e.key === 'Enter') {
+            e.preventDefault()
+            keyHandlers('ENTER')
+        } else if (e.key >= '0' && e.key <= '9') {
+            keyHandlers(e.key)
+        } else if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '%' || e.key === '*') {
+            keyHandlers(e.key)
+        }
 })
 
-document.addEventListener('keydown', (e) => {
-    if(e.key === 'Backspace') {
-        keyBoardKeyPress('BACKSPACE')
-    } else if (e.key === "Enter") {
-        e.preventDefault();
-        keyBoardKeyPress('ENTER')
+
+function keyHandlers(input) {
+    if(input === '=' || input === 'ENTER') {
+
+    if (string === '') {
+        display.textContent = 'Write something !'
+        return
     }
-})
 
+    let result = eval(string)
 
-function keyBoardKeyPress(input) {
-    if(input === "=" || input === 'ENTER') {
-        string = String(eval(string))
+    if (Number.isNaN(result)) {
+        display.textContent = 'Invalid Calculation !'
+        string = ''
+        return
+    }
+
+    string = String(result)
+    
     } else if (input === 'AC') {
-        string = '';
-    } else if (input === 'x') {
-        string = string + '*'
-    } else if (input === '÷') {
-        string = string + '/'
-    } else if (input === '⌫' || input === 'BACKSPACE') {
+        string = ''
+    } else if (input === '⌫' ||  input === 'BACKSPACE') {
         string = string.slice(0, -1)
-    } else {
+    } else if (input === '÷')  {
+        string += '/'
+    }
+    
+    else {
         string = string + input
     }
-    display.textContent = String(string).replace(/\*/g, 'x')
-} 
-    
+    display.textContent = string.replace(/\*/g, 'x')
+}
+
+
+clickEvent()
