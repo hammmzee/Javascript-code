@@ -83,3 +83,82 @@ button:active {
     background-color: #555;     
     transform: scale(0.99);
 }
+
+@media (max-width: 768px) {
+    h2 {
+        width: 300px;
+        height: 65px;
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+        border-radius: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .display {
+        min-height: 25vh;
+    }
+
+    .buttons {
+        min-height: 75vh;
+        align-items: flex-start;
+    }
+
+    h2 {
+        width: 280px;
+        height: 60px;
+    }
+
+    button {
+        width: 62px;
+        height: 62px;
+        font-size: 30px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    h2 {
+        width: 250px;
+        height: 55px;
+    }
+
+    button {
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+        border-radius: 18px;
+    }
+
+    .first-column,
+    .second-column,
+    .third-column,
+    .fourth-column {
+        padding: 0 3px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .display {
+        min-height: 20vh;
+    }
+
+    .buttons {
+        min-height: 80vh;
+    }
+
+    h2 {
+        height: 50px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        border-radius: 16px;
+    }
+}
