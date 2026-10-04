@@ -99,6 +99,10 @@ button:active {
 }
 
 @media (max-width: 480px) {
+    html, body {
+        background-color: black;
+    }
+
     .display {
         min-height: 25vh;
     }
@@ -106,6 +110,7 @@ button:active {
     .buttons {
         min-height: 75vh;
         align-items: flex-start;
+        padding-top: 30px;
     }
 
     h2 {
