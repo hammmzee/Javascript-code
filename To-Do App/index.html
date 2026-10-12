@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="all-content">
+        <header>
+            <h1 class="top-heading">My To-Do List</h1>
+        </header>
+
+        <section class="task-writer">
+            <input id="writing-area" type="text" placeholder="What do you need to do?">
+            <button id="task-adder">Add task</button>
+        </section>
+
+        <section class="task-displayer-buttons">
+            <Button class="sections" id="all-tasks">All</Button>
+            <Button class="sections" id="active-tasks">Active</Button>
+            <Button class="sections" id="completed-tasks">Completed</Button>
+        </section>
+
+        <section class="task-displayer">
+            <p id="no-tasks">no tasks to show</p>
+            <ul id="main-area"></ul>
+        </section>
+        
+        
+        <section class="task-clearer">
+            <span>0 task remaining</span>
+            <button id="clear-everything">Clear Completed</button>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
